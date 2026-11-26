@@ -9,7 +9,7 @@ inputs:
   version:
     description: "Lockward release to install, without the leading v. The checksum and Sigstore signature are verified before it runs."
     required: false
-    default: "0.2.2"
+    default: "0.2.3"
   args:
     description: Arguments passed to lockward.
     required: false

@@ -21,9 +21,9 @@ jobs:
       - uses: actions/checkout@<sha>
         with:
           persist-credentials: false
-      - uses: Breaktroughf1/lockward-action@<commit sha of v0.2.2>   # v0.2.2
+      - uses: Breaktroughf1/lockward-action@<commit sha of v0.2.3>   # v0.2.3
         with:
-          version: 0.2.2
+          version: 0.2.3
 ```
 
 Pin the action to a full commit SHA, as you would any third-party action. The job fails with Lockward's exit code when assets drift (1) or a policy rule fails (2), uploads SARIF so each finding appears in code scanning, and writes the result to the job summary.
@@ -32,7 +32,7 @@ Pin the action to a full commit SHA, as you would any third-party action. The jo
 
 | Input | Default | Description |
 |---|---|---|
-| `version` | `0.2.2` | Lockward release to install, without the leading `v` |
+| `version` | `0.2.3` | Lockward release to install, without the leading `v` |
 | `args` | `verify --frozen` | Arguments passed to `lockward` |
 | `sarif` | `true` | For `verify`, also upload a SARIF report to code scanning (needs `security-events: write`) |
 | `working-directory` | `.` | Directory to run in |
@@ -55,7 +55,7 @@ Supported runners: Linux, macOS and Windows on x64 and arm64. Every change is te
 
 ## Versions
 
-Tags match Lockward releases: `v0.2.2` of this action installs Lockward 0.2.2 by default. There are no moving major-version tags; pin a commit SHA.
+Tags match Lockward releases: `v0.2.3` of this action installs Lockward 0.2.3 by default. There are no moving major-version tags; pin a commit SHA.
 
 ## Security
 
